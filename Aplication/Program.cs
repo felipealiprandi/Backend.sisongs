@@ -25,4 +25,5 @@ app.MapControllers();
 //string port = Environment.GetEnvironmentVariable("PORT") ?? "5001";
 
 // Inicie o aplicativo usando o host 0.0.0.0 e a porta fornecida pela variável de ambiente
-app.Run($"https://0.0.0.0:5001");
+//app.Run($"https://0.0.0.0:5001");
+app.Run();
