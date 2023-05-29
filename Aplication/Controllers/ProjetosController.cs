@@ -4,7 +4,7 @@ using Sisongs.Application.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Sisongs.WebApi.Controllers
+namespace API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
