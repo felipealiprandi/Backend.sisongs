@@ -1,8 +1,0 @@
-version: 2
-environments:
-  development:
-    buildCommand: dotnet build --no-restore --configuration Release
-    startCommand: dotnet run --no-build --urls=https://0.0.0.0:5001 --configuration Release
-    routes:
-      - path: /
-        destination: https://localhost:5001
