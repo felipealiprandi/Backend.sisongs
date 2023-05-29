@@ -18,12 +18,10 @@ namespace MeuProjeto.WebApi.Controllers
         }
 
         [HttpGet]
-       // public async Task<ActionResult<List<Ong>>> Get()
-            public async Task<bool> Get()
+        public async Task<ActionResult<List<Ong>>> Get()
         {
-            //var ongs = await _ongService.GetAllOngsAsync();
-            // return Ok(ongs);
-            return true;
+            var ongs = await _ongService.GetAllOngsAsync();
+            return Ok(ongs);
         }
 
         [HttpPost]
