@@ -39,10 +39,6 @@ namespace API
                 // c.OperationFilter<ApiVersionOperationFilter>();
             });
 
-            services.Configure<KestrelServerOptions>(options =>
-            {
-                options.Listen(IPAddress.Any, Convert.ToInt32(5001));
-            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
