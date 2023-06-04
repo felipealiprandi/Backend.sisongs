@@ -39,20 +39,20 @@ namespace API
                 // c.OperationFilter<ApiVersionOperationFilter>();
             });
 
-            //services.Configure<KestrelServerOptions>(options =>
-            //{
-            //    options.Listen(IPAddress.Any, Convert.ToInt32(5001));
-            //});
-
-            services.AddCors(options =>
+            services.Configure<KestrelServerOptions>(options =>
             {
-                options.AddDefaultPolicy(builder =>
-                {
-                    builder.AllowAnyOrigin()
-                           .AllowAnyMethod()
-                           .AllowAnyHeader();
-                });
+                options.Listen(IPAddress.Any, Convert.ToInt32(5001));
             });
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddDefaultPolicy(builder =>
+            //    {
+            //        builder.AllowAnyOrigin()
+            //               .AllowAnyMethod()
+            //               .AllowAnyHeader();
+            //    });
+            //});
 
         }
 
