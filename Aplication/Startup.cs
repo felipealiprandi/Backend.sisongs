@@ -44,15 +44,15 @@ namespace API
                 options.Listen(IPAddress.Any, Convert.ToInt32(5001));
             });
 
-            //services.AddCors(options =>
-            //{
-            //    options.AddDefaultPolicy(builder =>
-            //    {
-            //        builder.AllowAnyOrigin()
-            //               .AllowAnyMethod()
-            //               .AllowAnyHeader();
-            //    });
-            //});
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200") // Substitua com a origem permitida do seu frontend
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
 
         }
 
@@ -62,7 +62,7 @@ namespace API
             //{
             //    app.UseDeveloperExceptionPage();
             //}
-
+            app.UseCors();
             app.UseRouting();
 
             // Middleware do Swagger
