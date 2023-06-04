@@ -23,8 +23,16 @@ namespace Sisongs.Data.Repositories
 
         public async Task CreateOngAsync(Ong ong)
         {
-            _dbContext.Ongs.Add(ong);
-            await _dbContext.SaveChangesAsync();
+            try
+            {
+                _dbContext.Ongs.Add(ong);
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                var erro = ex.ToString();
+            }
+
         }
     }
 }

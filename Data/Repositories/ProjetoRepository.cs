@@ -18,7 +18,16 @@ namespace Sisongs.Data.Repositories
 
         public async Task<List<Projeto>> GetAllProjetosAsync()
         {
-            return await _dbContext.Projetos.ToListAsync();
+            try
+            {
+                return await _dbContext.Projetos.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                var error = ex.ToString();
+                return await _dbContext.Projetos.ToListAsync();
+            }
+
         }
     }
 }

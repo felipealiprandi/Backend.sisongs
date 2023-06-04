@@ -8,12 +8,12 @@ namespace Domain.Models
 {
     public class Ong
     {
-        public int Id { get; set; }
-        public string? Nome { get; set; }
-        public string? Endereco { get; set; }
-        public string? Cidade { get; set; }
-        public string? Estado { get; set; }
-        public string? Telefone { get; set; }
-        public string? Email { get; set; }
+        public int id { get; set; }
+        public string? nome { get; set; }
+        public string? endereco { get; set; }
+        public string? cidade { get; set; }
+        public string? estado { get; set; }
+        public string? telefone { get; set; }
+        public string? email { get; set; }
     }
 }
