@@ -6,6 +6,7 @@ using Sisongs.Application.Services;
 using Sisongs.Data.Repositories;
 using Sisongs.Infrastructure.Data;
 using System.Net;
+using Microsoft.Extensions.Logging;
 
 namespace API
 {
@@ -52,6 +53,11 @@ namespace API
                            .AllowAnyMethod()
                            .AllowAnyHeader();
                 });
+            });
+
+            services.AddLogging(logging =>
+            {
+                logging.AddBrowserConsole(); // Adiciona o provedor de logs para o console do navegador
             });
 
         }

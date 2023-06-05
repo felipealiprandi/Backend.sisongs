@@ -17,13 +17,13 @@ namespace Sisongs.Infrastructure.Data
         {
             modelBuilder.Entity<Ong>(entity =>
             {
-                entity.ToTable("ongs", "ongs");
+                entity.ToTable("ongs", "public");
                 entity.HasKey(e => e.id);
             });
 
             modelBuilder.Entity<Projeto>(entity =>
             {
-                entity.ToTable("projetos", "ongs");
+                entity.ToTable("projetos", "public");
                 entity.HasKey(e => e.id);
             });
         }
