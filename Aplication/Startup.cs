@@ -22,7 +22,7 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SisongsDbContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("Server=containers-us-west-165.railway.app;Port=6507;Database=railway;User Id=postgres;Password=J8AtcXbLGlLzXGbSYLWh;")));
+                options.UseNpgsql("Server=containers-us-west-165.railway.app;Port=6507;Database=railway;User Id=postgres;Password=J8AtcXbLGlLzXGbSYLWh;"));
 
             
             services.AddScoped<IOngRepository, OngRepository>();
