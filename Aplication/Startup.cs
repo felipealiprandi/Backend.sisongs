@@ -24,6 +24,7 @@ namespace API
             services.AddDbContext<SisongsDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
+            
             services.AddScoped<IOngRepository, OngRepository>();
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
 
@@ -61,7 +62,7 @@ namespace API
         {
             //if (env.IsDevelopment())
             //{
-            //    app.UseDeveloperExceptionPage();
+               app.UseDeveloperExceptionPage();
             //}
             app.UseCors();
             app.UseRouting();
