@@ -48,7 +48,7 @@ namespace API
             {
                 options.AddDefaultPolicy(builder =>
                 {
-                    builder.WithOrigins("http://localhost:4200") // Substitua com a origem permitida do seu frontend
+                    builder.AllowAnyOrigin()//("http://localhost:4200") // Substitua com a origem permitida do seu frontend
                            .AllowAnyMethod()
                            .AllowAnyHeader();
                 });
