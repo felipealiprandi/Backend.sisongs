@@ -24,6 +24,7 @@ namespace Sisongs.Data.Repositories
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 return new List<Ong>();
             }
 
