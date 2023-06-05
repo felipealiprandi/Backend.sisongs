@@ -42,7 +42,7 @@ namespace API
 
             services.Configure<KestrelServerOptions>(options =>
             {
-                options.Listen(IPAddress.Any, Convert.ToInt32(5001));
+                options.Listen(IPAddress.Parse("0.0.0.0"), Convert.ToInt32(5001));
             });
 
             services.AddCors(options =>
