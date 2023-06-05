@@ -50,8 +50,6 @@ namespace API.Controllers
 
                 return ex.Message;
             }
-
-            return "deu errado";
         }
 
         [HttpPost]
