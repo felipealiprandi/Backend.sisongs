@@ -32,13 +32,13 @@ namespace API
 
             services.AddControllers();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Nome da sua API", Version = "v1" });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Nome da sua API", Version = "v1" });
 
-                // Configurar o suporte a versões da API
-                // c.OperationFilter<ApiVersionOperationFilter>();
-            });
+            //    // Configurar o suporte a versões da API
+            //    // c.OperationFilter<ApiVersionOperationFilter>();
+            //});
 
             services.Configure<KestrelServerOptions>(options =>
             {
@@ -67,11 +67,11 @@ namespace API
             app.UseRouting();
 
             // Middleware do Swagger
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Nome da sua API v1");
-            });
+            //app.UseSwagger();
+            //app.UseSwaggerUI(c =>
+            //{
+            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Nome da sua API v1");
+            //});
 
             app.UseEndpoints(endpoints =>
             {

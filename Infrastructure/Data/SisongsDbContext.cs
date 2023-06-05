@@ -17,14 +17,14 @@ namespace Sisongs.Infrastructure.Data
         {
             modelBuilder.Entity<Ong>(entity =>
             {
-                entity.ToTable("ongs", "public");
-                entity.HasKey(e => e.id);
+                entity.ToTable("ongs");
+                //entity.HasKey(e => e.id);
             });
 
             modelBuilder.Entity<Projeto>(entity =>
             {
-                entity.ToTable("projetos", "public");
-                entity.HasKey(e => e.id);
+                entity.ToTable("projetos");
+                //entity.HasKey(e => e.id);
             });
         }
     }
