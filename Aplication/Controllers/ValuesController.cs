@@ -21,10 +21,19 @@ namespace API.Controllers
         // GET: api/<ValuesController>
         [HttpGet]
         //[HttpGet]
-        public async Task<ActionResult<List<Ong>>> Get()
+        public string Get()
         {
-            var ongs = await _ongService.GetAllOngsAsync();
-            return Ok(ongs);
+            try
+            {
+                var ongs = _ongService.GetAllOngsAsync();
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message;
+            }
+
+            return "deu certo";
         }
 
 
