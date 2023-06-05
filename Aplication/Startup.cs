@@ -55,11 +55,6 @@ namespace API
                 });
             });
 
-            services.AddLogging(logging =>
-            {
-                logging.AddBrowserConsole(); // Adiciona o provedor de logs para o console do navegador
-            });
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
