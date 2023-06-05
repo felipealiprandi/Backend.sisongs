@@ -1,13 +1,11 @@
 ﻿using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Sisongs.Application.Services;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class OngsController : ControllerBase
     {
         private readonly IOngService _ongService;
