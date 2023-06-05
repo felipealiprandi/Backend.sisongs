@@ -35,7 +35,23 @@ namespace API.Controllers
                 return ex.Message;
             }
 
-            return "";
+            return "deu certo";
+        }
+
+        [HttpGet("novo")]
+        public async Task<string> Get2()
+        {
+            try
+            {
+                return "deu certo";
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message;
+            }
+
+            return "deu errado";
         }
 
         [HttpPost]
