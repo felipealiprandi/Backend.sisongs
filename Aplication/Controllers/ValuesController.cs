@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
+﻿using Domain.Models;
+using Microsoft.AspNetCore.Mvc;
+using Sisongs.Application.Services;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace API.Controllers
@@ -8,12 +9,24 @@ namespace API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IOngService _ongService;
+
+        public ValuesController(IOngService ongService)
+        {
+            _ongService = ongService;
+        }
+
+
+
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        //[HttpGet]
+        public async Task<ActionResult<List<Ong>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var ongs = await _ongService.GetAllOngsAsync();
+            return Ok(ongs);
         }
+
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
