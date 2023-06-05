@@ -18,17 +18,7 @@ namespace Sisongs.Data.Repositories
 
         public async Task<List<Ong>> GetAllOngsAsync()
         {
-            try
-            {
                 return await _dbContext.Ongs.ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return new List<Ong>();
-            }
-
-
         }
 
         public async Task CreateOngAsync(Ong ong)
