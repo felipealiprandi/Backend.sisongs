@@ -10,5 +10,9 @@ namespace Domain.Models
     {
         public int id { get; set; }
         public string nome { get; set; }
+        public string dataInicio { get; set; }
+        public string dataFim { get; set; }
+        public string local { get; set; }
+
     }
 }
