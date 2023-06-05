@@ -23,11 +23,11 @@ namespace API.Controllers
         //}
 
         [HttpGet]
-        public async Task<string> Get()
+        public string Get()
         {
             try
             {
-                var ongs = await _ongService.GetAllOngsAsync();
+                var ongs =  _ongService.GetAllOngsAsync();
             }
             catch (Exception ex)
             {
